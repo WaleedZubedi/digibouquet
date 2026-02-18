@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Bouquet - DigiBouquet</title>
+    <meta name="description" content="Create a beautiful digital flower bouquet with a personalized card and share it with someone special. Choose from roses, peonies, tulips, and more.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1595899785388205"
+         crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Progress Bar (5 steps) -->
+        <div class="progress-bar" id="progressBar">
+            <div class="progress-steps">
+                <div class="progress-step active" data-step="1">
+                    <div class="step-dot">1</div>
+                    <span>Flowers</span>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <div class="step-dot">2</div>
+                    <span>Greenery</span>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <div class="step-dot">3</div>
+                    <span>Card</span>
+                </div>
+                <div class="progress-step" data-step="4">
+                    <div class="step-dot">4</div>
+                    <span>Message</span>
+                </div>
+                <div class="progress-step" data-step="5">
+                    <div class="step-dot">5</div>
+                    <span>Theme</span>
+                </div>
+            </div>
+            <div class="progress-line">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Step 1: Flower Selection -->
+        <div class="step step-active" id="step1">
+            <h1 class="step-title">Pick Your Flowers</h1>
+            <p class="step-subtitle">Select the flowers for your bouquet (pick at least 3)</p>
+            <div class="flower-grid" id="flowerGrid"></div>
+            <div class="nav-buttons">
+                <button class="btn btn-next" id="btnNext1" disabled>Next &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Greenery Selection -->
+        <div class="step" id="step2">
+            <h1 class="step-title">Choose Your Greenery</h1>
+            <p class="step-subtitle">Pick a greenery style to wrap your bouquet</p>
+            <div class="greenery-grid" id="greeneryGrid"></div>
+            <div class="nav-buttons">
+                <button class="btn btn-back" id="btnBack2">&larr; Back</button>
+                <button class="btn btn-next" id="btnNext2">Next &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Card Template -->
+        <div class="step" id="step3">
+            <h1 class="step-title">Choose Your Card</h1>
+            <p class="step-subtitle">Pick a card style for your personal message</p>
+            <div class="card-template-grid" id="cardTemplateGrid"></div>
+            <div class="nav-buttons">
+                <button class="btn btn-back" id="btnBack3">&larr; Back</button>
+                <button class="btn btn-next" id="btnNext3">Next &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Step 4: Card Message -->
+        <div class="step" id="step4">
+            <h1 class="step-title">Write Your Card</h1>
+            <p class="step-subtitle">Add a personal message to your bouquet</p>
+            <div class="card-form">
+                <div class="card-preview" id="cardPreview">
+                    <div class="card-inner" id="cardPreviewInner">
+                        <div class="card-decoration top-left"></div>
+                        <div class="card-decoration top-right"></div>
+                        <div class="card-to">To: <span id="previewTo">...</span></div>
+                        <div class="card-message" id="previewMessage">Your message here...</div>
+                        <div class="card-from">With love, <span id="previewFrom">...</span></div>
+                        <div class="card-decoration bottom-left"></div>
+                        <div class="card-decoration bottom-right"></div>
+                    </div>
+                </div>
+                <div class="card-inputs">
+                    <div class="input-group">
+                        <label for="recipientName">Recipient's Name</label>
+                        <input type="text" id="recipientName" placeholder="Who is this for?" maxlength="30">
+                    </div>
+                    <div class="input-group">
+                        <label for="cardMessage">Your Message</label>
+                        <textarea id="cardMessage" placeholder="Write something sweet..." maxlength="200" rows="4"></textarea>
+                        <span class="char-count"><span id="charCount">0</span>/200</span>
+                    </div>
+                    <div class="input-group">
+                        <label for="senderName">Your Name</label>
+                        <input type="text" id="senderName" placeholder="From..." maxlength="30">
+                    </div>
+                </div>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn btn-back" id="btnBack4">&larr; Back</button>
+                <button class="btn btn-next" id="btnNext4">Next &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Step 5: Theme -->
+        <div class="step" id="step5">
+            <h1 class="step-title">Set the Mood</h1>
+            <p class="step-subtitle">Choose a background theme for your bouquet</p>
+
+            <div class="bg-template-grid" id="bgTemplateGrid"></div>
+
+            <div class="nav-buttons">
+                <button class="btn btn-back" id="btnBack5">&larr; Back</button>
+                <button class="btn btn-next btn-create" id="btnCreate">Create Bouquet &#x1F490;</button>
+            </div>
+        </div>
+
+        <!-- Step 6: Your Bouquet is Ready -->
+        <div class="step" id="step6">
+            <h1 class="step-title">Your Bouquet is Ready!</h1>
+            <p class="step-subtitle">Here's your beautiful creation</p>
+            <div class="ready-bouquet-scene">
+                <div class="ready-bouquet-wrapper">
+                    <div class="ready-bouquet" id="readyBouquet"></div>
+                    <div class="ready-card" id="readyCard"></div>
+                </div>
+            </div>
+            <p class="step-subtitle" style="margin-top:24px;">Share this link with your special someone</p>
+            <div class="share-section">
+                <div class="share-link-box">
+                    <input type="text" id="shareLink" readonly>
+                    <button class="btn btn-copy" id="btnCopy">Copy</button>
+                </div>
+                <p class="copy-feedback" id="copyFeedback">Link copied!</p>
+            </div>
+        </div>
+
+        <!-- Reveal Page (loaded via URL params) -->
+        <div class="step" id="revealPage" style="display:none;">
+            <div class="reveal-container">
+                <div class="reveal-header" id="revealHeader">
+                    <h1 class="step-title reveal-title">A bouquet for you!</h1>
+                    <p class="step-subtitle reveal-subtitle" id="revealSubtitle"></p>
+                </div>
+                <div class="reveal-bouquet-scene" id="revealScene">
+                    <div class="reveal-bouquet-wrapper">
+                        <div class="reveal-bouquet" id="revealBouquet"></div>
+                        <div class="reveal-card" id="revealCard"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="flowers.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

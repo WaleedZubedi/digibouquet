@@ -3,164 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigiBouquet - Send a Digital Flower Bouquet</title>
+    <title>DigiBouquet - Create and Send Beautiful Digital Flower Bouquets</title>
+    <meta name="description" content="Create stunning digital flower bouquets with personalized cards and share them with the people you love. Choose from roses, peonies, tulips, lilies, and more. Free and instant.">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="content.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1595899785388205"
          crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="app">
-        <!-- Progress Bar (5 steps) -->
-        <div class="progress-bar" id="progressBar">
-            <div class="progress-steps">
-                <div class="progress-step active" data-step="1">
-                    <div class="step-dot">1</div>
-                    <span>Flowers</span>
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="/" class="site-logo">DigiBouquet</a>
+            <button class="nav-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')" aria-label="Toggle navigation">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </button>
+            <nav class="site-nav">
+                <a href="/">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/create.html" class="nav-cta">Create Bouquet</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Send a Beautiful Digital Bouquet</h1>
+        <p>Create a personalized flower bouquet with a heartfelt card and share it instantly with someone special. No delivery fees, no wilting flowers. Just pure love, beautifully wrapped in pixels.</p>
+        <a href="/create.html" class="hero-cta">Create Your Bouquet</a>
+        <p class="hero-sub">Free to create and share. No account needed.</p>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="page-content">
+            <h2 class="section-heading">How It Works</h2>
+            <p class="section-subheading">Three simple steps to brighten someone's day</p>
+            <div class="steps-grid">
+                <div class="how-step">
+                    <div class="how-step-icon">&#127803;</div>
+                    <h3>Pick Your Flowers</h3>
+                    <p>Choose from eight beautiful flowers including roses, peonies, tulips, daisies, lilies, orchids, camellias, and lotus. Select your favorites to build a unique arrangement.</p>
                 </div>
-                <div class="progress-step" data-step="2">
-                    <div class="step-dot">2</div>
-                    <span>Greenery</span>
+                <div class="how-step">
+                    <div class="how-step-icon">&#9993;</div>
+                    <h3>Write Your Card</h3>
+                    <p>Pick a card style that suits the occasion, then write a personal message. Choose from elegant, vintage, midnight, botanical, and more card designs.</p>
                 </div>
-                <div class="progress-step" data-step="3">
-                    <div class="step-dot">3</div>
-                    <span>Card</span>
+                <div class="how-step">
+                    <div class="how-step-icon">&#128279;</div>
+                    <h3>Share the Link</h3>
+                    <p>Get a unique link to your bouquet and send it through any messaging app, email, or social media. Your recipient opens it to a beautiful reveal experience.</p>
                 </div>
-                <div class="progress-step" data-step="4">
-                    <div class="step-dot">4</div>
-                    <span>Message</span>
-                </div>
-                <div class="progress-step" data-step="5">
-                    <div class="step-dot">5</div>
-                    <span>Theme</span>
-                </div>
-            </div>
-            <div class="progress-line">
-                <div class="progress-fill" id="progressFill"></div>
             </div>
         </div>
+    </section>
 
-        <!-- Step 1: Flower Selection -->
-        <div class="step step-active" id="step1">
-            <h1 class="step-title">Pick Your Flowers</h1>
-            <p class="step-subtitle">Select the flowers for your bouquet (pick at least 3)</p>
-            <div class="flower-grid" id="flowerGrid"></div>
-            <div class="nav-buttons">
-                <button class="btn btn-next" id="btnNext1" disabled>Next &rarr;</button>
+    <!-- Flower Showcase -->
+    <section class="flower-showcase">
+        <div class="page-content">
+            <h2 class="section-heading">Explore Our Flowers</h2>
+            <p class="section-subheading">Learn about the meaning and symbolism behind each bloom</p>
+            <div class="showcase-grid">
+                <a href="/flowers/rose.html" class="showcase-card">
+                    <img src="/flower assests/rose-Binryhht.webp" alt="Rose" loading="lazy">
+                    <h3>Rose</h3>
+                    <p>The timeless symbol of love and passion</p>
+                    <span class="read-more">Read more &rarr;</span>
+                </a>
+                <a href="/flowers/peony.html" class="showcase-card">
+                    <img src="/flower assests/peony-BCw4kTvM.webp" alt="Peony" loading="lazy">
+                    <h3>Peony</h3>
+                    <p>Represents romance, prosperity, and good fortune</p>
+                    <span class="read-more">Read more &rarr;</span>
+                </a>
+                <a href="/flowers/tulip.html" class="showcase-card">
+                    <img src="/flower assests/tulip-DkVON6MI.webp" alt="Tulip" loading="lazy">
+                    <h3>Tulip</h3>
+                    <p>A declaration of perfect, deep love</p>
+                    <span class="read-more">Read more &rarr;</span>
+                </a>
+                <a href="/flowers/daisy.html" class="showcase-card">
+                    <img src="/flower assests/daisy-CELBRpZ7.webp" alt="Daisy" loading="lazy">
+                    <h3>Daisy</h3>
+                    <p>Innocence, purity, and joyful new beginnings</p>
+                    <span class="read-more">Read more &rarr;</span>
+                </a>
+                <a href="/flowers/lily.html" class="showcase-card">
+                    <img src="/flower assests/lily-Bn_fQTOU.webp" alt="Lily" loading="lazy">
+                    <h3>Lily</h3>
+                    <p>Elegance, devotion, and purity of heart</p>
+                    <span class="read-more">Read more &rarr;</span>
+                </a>
+                <a href="/flowers/orchid.html" class="showcase-card">
+                    <img src="/flower assests/orchid-DO40kC-2.webp" alt="Orchid" loading="lazy">
+                    <h3>Orchid</h3>
+                    <p>Luxury, beauty, and strength of character</p>
+                    <span class="read-more">Read more &rarr;</span>
+                </a>
+                <a href="/flowers/camellia.html" class="showcase-card">
+                    <img src="/flower assests/camellia-Doo1wvpa.webp" alt="Camellia" loading="lazy">
+                    <h3>Camellia</h3>
+                    <p>Admiration, perfection, and faithful longing</p>
+                    <span class="read-more">Read more &rarr;</span>
+                </a>
+                <a href="/flowers/lotus.html" class="showcase-card">
+                    <img src="/flower assests/lotus-DDF3I5iL.webp" alt="Lotus" loading="lazy">
+                    <h3>Lotus</h3>
+                    <p>Spiritual awakening, rebirth, and resilience</p>
+                    <span class="read-more">Read more &rarr;</span>
+                </a>
             </div>
         </div>
+    </section>
 
-        <!-- Step 2: Greenery Selection -->
-        <div class="step" id="step2">
-            <h1 class="step-title">Choose Your Greenery</h1>
-            <p class="step-subtitle">Pick a greenery style to wrap your bouquet</p>
-            <div class="greenery-grid" id="greeneryGrid"></div>
-            <div class="nav-buttons">
-                <button class="btn btn-back" id="btnBack2">&larr; Back</button>
-                <button class="btn btn-next" id="btnNext2">Next &rarr;</button>
-            </div>
-        </div>
-
-        <!-- Step 3: Card Template -->
-        <div class="step" id="step3">
-            <h1 class="step-title">Choose Your Card</h1>
-            <p class="step-subtitle">Pick a card style for your personal message</p>
-            <div class="card-template-grid" id="cardTemplateGrid"></div>
-            <div class="nav-buttons">
-                <button class="btn btn-back" id="btnBack3">&larr; Back</button>
-                <button class="btn btn-next" id="btnNext3">Next &rarr;</button>
-            </div>
-        </div>
-
-        <!-- Step 4: Card Message -->
-        <div class="step" id="step4">
-            <h1 class="step-title">Write Your Card</h1>
-            <p class="step-subtitle">Add a personal message to your bouquet</p>
-            <div class="card-form">
-                <div class="card-preview" id="cardPreview">
-                    <div class="card-inner" id="cardPreviewInner">
-                        <div class="card-decoration top-left"></div>
-                        <div class="card-decoration top-right"></div>
-                        <div class="card-to">To: <span id="previewTo">...</span></div>
-                        <div class="card-message" id="previewMessage">Your message here...</div>
-                        <div class="card-from">With love, <span id="previewFrom">...</span></div>
-                        <div class="card-decoration bottom-left"></div>
-                        <div class="card-decoration bottom-right"></div>
+    <!-- Occasions -->
+    <section class="occasions">
+        <div class="page-content">
+            <h2 class="section-heading">Perfect for Every Occasion</h2>
+            <p class="section-subheading">A digital bouquet says it all, no matter the moment</p>
+            <div class="occasions-grid">
+                <div class="occasion-card">
+                    <div class="occasion-icon">&#10084;&#65039;</div>
+                    <div>
+                        <h3>Anniversaries</h3>
+                        <p>Celebrate years of love with a bouquet crafted just for your partner. Pair roses with a romantic card for maximum impact.</p>
                     </div>
                 </div>
-                <div class="card-inputs">
-                    <div class="input-group">
-                        <label for="recipientName">Recipient's Name</label>
-                        <input type="text" id="recipientName" placeholder="Who is this for?" maxlength="30">
-                    </div>
-                    <div class="input-group">
-                        <label for="cardMessage">Your Message</label>
-                        <textarea id="cardMessage" placeholder="Write something sweet..." maxlength="200" rows="4"></textarea>
-                        <span class="char-count"><span id="charCount">0</span>/200</span>
-                    </div>
-                    <div class="input-group">
-                        <label for="senderName">Your Name</label>
-                        <input type="text" id="senderName" placeholder="From..." maxlength="30">
+                <div class="occasion-card">
+                    <div class="occasion-icon">&#127874;</div>
+                    <div>
+                        <h3>Birthdays</h3>
+                        <p>Surprise someone on their special day with a vibrant digital bouquet. Perfect when you are far away but want to feel close.</p>
                     </div>
                 </div>
-            </div>
-            <div class="nav-buttons">
-                <button class="btn btn-back" id="btnBack4">&larr; Back</button>
-                <button class="btn btn-next" id="btnNext4">Next &rarr;</button>
-            </div>
-        </div>
-
-        <!-- Step 5: Theme -->
-        <div class="step" id="step5">
-            <h1 class="step-title">Set the Mood</h1>
-            <p class="step-subtitle">Choose a background theme for your bouquet</p>
-
-            <div class="bg-template-grid" id="bgTemplateGrid"></div>
-
-            <div class="nav-buttons">
-                <button class="btn btn-back" id="btnBack5">&larr; Back</button>
-                <button class="btn btn-next btn-create" id="btnCreate">Create Bouquet &#x1F490;</button>
-            </div>
-        </div>
-
-        <!-- Step 6: Your Bouquet is Ready -->
-        <div class="step" id="step6">
-            <h1 class="step-title">Your Bouquet is Ready!</h1>
-            <p class="step-subtitle">Here's your beautiful creation</p>
-            <div class="ready-bouquet-scene">
-                <div class="ready-bouquet-wrapper">
-                    <div class="ready-bouquet" id="readyBouquet"></div>
-                    <div class="ready-card" id="readyCard"></div>
+                <div class="occasion-card">
+                    <div class="occasion-icon">&#127775;</div>
+                    <div>
+                        <h3>Just Because</h3>
+                        <p>Sometimes the best gifts are unexpected. Brighten an ordinary day with flowers that carry your warmth and care.</p>
+                    </div>
                 </div>
-            </div>
-            <p class="step-subtitle" style="margin-top:24px;">Share this link with your special someone</p>
-            <div class="share-section">
-                <div class="share-link-box">
-                    <input type="text" id="shareLink" readonly>
-                    <button class="btn btn-copy" id="btnCopy">Copy</button>
+                <div class="occasion-card">
+                    <div class="occasion-icon">&#128155;</div>
+                    <div>
+                        <h3>Get Well Soon</h3>
+                        <p>When a loved one is feeling under the weather, a cheerful bouquet can lift their spirits and remind them you care.</p>
+                    </div>
                 </div>
-                <p class="copy-feedback" id="copyFeedback">Link copied!</p>
-            </div>
-        </div>
-
-        <!-- Reveal Page (loaded via URL params) -->
-        <div class="step" id="revealPage" style="display:none;">
-            <div class="reveal-container">
-                <div class="reveal-header" id="revealHeader">
-                    <h1 class="step-title reveal-title">A bouquet for you!</h1>
-                    <p class="step-subtitle reveal-subtitle" id="revealSubtitle"></p>
+                <div class="occasion-card">
+                    <div class="occasion-icon">&#128591;</div>
+                    <div>
+                        <h3>Thank You</h3>
+                        <p>Show your gratitude with flowers. A thoughtful digital bouquet speaks louder than a simple text message.</p>
+                    </div>
                 </div>
-                <div class="reveal-bouquet-scene" id="revealScene">
-                    <div class="reveal-bouquet-wrapper">
-                        <div class="reveal-bouquet" id="revealBouquet"></div>
-                        <div class="reveal-card" id="revealCard"></div>
+                <div class="occasion-card">
+                    <div class="occasion-icon">&#127891;</div>
+                    <div>
+                        <h3>Congratulations</h3>
+                        <p>Whether it is a graduation, promotion, or new beginning, celebrate their achievement with a beautiful floral arrangement.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="flowers.js"></script>
-    <script src="app.js"></script>
+    <!-- Why Digital Bouquets -->
+    <section class="how-it-works">
+        <div class="page-content">
+            <h2 class="section-heading">Why Choose a Digital Bouquet?</h2>
+            <p class="section-subheading">Modern love deserves modern expression</p>
+            <div class="steps-grid">
+                <div class="how-step">
+                    <div class="how-step-icon">&#127757;</div>
+                    <h3>Send Anywhere, Instantly</h3>
+                    <p>No waiting for delivery. Your bouquet arrives the moment you share the link, whether your recipient is across the room or across the world.</p>
+                </div>
+                <div class="how-step">
+                    <div class="how-step-icon">&#9854;</div>
+                    <h3>Eco-Friendly</h3>
+                    <p>No carbon footprint from shipping, no plastic wrapping, no water waste. Digital flowers are the greenest choice you can make.</p>
+                </div>
+                <div class="how-step">
+                    <div class="how-step-icon">&#128150;</div>
+                    <h3>Lasts Forever</h3>
+                    <p>Unlike real flowers that wilt in days, your digital bouquet stays beautiful forever. A keepsake link your loved one can revisit anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <h2>Ready to Make Someone Smile?</h2>
+        <p>It takes less than two minutes to create a bouquet that will be remembered forever.</p>
+        <a href="/create.html" class="hero-cta">Create Your Bouquet</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="/" class="site-logo">DigiBouquet</a>
+                <p>Create and share beautiful digital flower bouquets with personalized cards. Spread love, one pixel at a time.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Flowers</h4>
+                <a href="/flowers/rose.html">Rose</a>
+                <a href="/flowers/peony.html">Peony</a>
+                <a href="/flowers/tulip.html">Tulip</a>
+                <a href="/flowers/daisy.html">Daisy</a>
+                <a href="/flowers/lily.html">Lily</a>
+                <a href="/flowers/orchid.html">Orchid</a>
+                <a href="/flowers/camellia.html">Camellia</a>
+                <a href="/flowers/lotus.html">Lotus</a>
+            </div>
+            <div class="footer-links">
+                <h4>Pages</h4>
+                <a href="/create.html">Create Bouquet</a>
+                <a href="/about.html">About</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 DigiBouquet. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle close when clicking a link
+        document.querySelectorAll('.site-nav a').forEach(a => {
+            a.addEventListener('click', () => document.querySelector('.site-nav').classList.remove('open'));
+        });
+    </script>
 </body>
 </html>
